@@ -25,9 +25,11 @@ class Student(Base):
 	finished_lab = Column(Boolean)
 
 	def __repr__(self):
-		return ("Student Name: {}\n"
+		return ("student_id:{}\n"
+				"Student Name: {}\n"
 				"Student Year: {} \n"
 				"Has Finished Lab: {}").format(
+					self.student_id,
 					self.name,
 					self.year,
 					self.finished_lab)
